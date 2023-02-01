@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Chromex NTP",
+    "version": "1.0",
+    "description": "Minimal New Tab Page Extension for Chrome",
+    "author": "Anshul Bansal",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["script.js"],
+            "matches": ["http://*/*", "https://*/*"]
+        }
+    ],
+    "icons": {
+        "128": "static/icon.png"
+    }
+}
