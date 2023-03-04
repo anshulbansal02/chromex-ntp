@@ -10,7 +10,7 @@ function updateHH(date) {
     if (hh === 0) hh = 12;
     else if (hh > 12) hh -= 12;
 
-    if (prevHH !== hh) {
+    if (hhWrapper && prevHH !== hh) {
         hhWrapper.innerText = hh < 10 ? "0" + hh : hh;
         prevHH = hh;
     }
@@ -19,7 +19,7 @@ function updateHH(date) {
 function updateMM(date) {
     let mm = date.getMinutes();
 
-    if (prevMM !== mm) {
+    if (mmWrapper && prevMM !== mm) {
         mmWrapper.innerText = mm < 10 ? "0" + mm : mm;
         prevMM = mm;
     }
